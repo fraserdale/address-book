@@ -11,3 +11,5 @@ The solution is written using python backend which is bound to the HTML front en
 
 ### Demonstration Images
 ![Address Book Home](https://github.com/fraserdale/address-book/blob/master/images/address_book_home.PNG "Address Book Home")
+![Organisation Page](https://github.com/fraserdale/address-book/blob/master/images/organisation_page.PNG "Organisation Page")
+![Employee Page](https://github.com/fraserdale/address-book/blob/master/images/employee_page.PNG "Employee Page")
