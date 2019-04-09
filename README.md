@@ -6,3 +6,5 @@
 * Your address book should allow organisations and people to be created, edited and deleted.
 
 ## Solution
+This solution uses the pymongo module and an mlab database to store the information about the organisations and their employees.  
+The solution is written using python backend which is bound to the HTML front end using flask.
