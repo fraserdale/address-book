@@ -22,8 +22,8 @@ This will serve the app on `127.0.0.1:3000`
 On the home page you can add/edit/delete organisations
 1. Create Organisation  
 ![Create Organisation](https://github.com/fraserdale/address-book/blob/master/images/add_org.gif "Create Organisation")   
-2. Edit Organisation  
-![Edit Organisation](https://github.com/fraserdale/address-book/blob/master/images/change_org.gif "Edit Organisation")   
+2. View Organisation  
+![View Organisation](https://github.com/fraserdale/address-book/blob/master/images/view_org.gif "View Organisation")   
 3. Delete Organisation  
 ![Delete Organisation](https://github.com/fraserdale/address-book/blob/master/images/delete_org.gif "Delete Organisation")   
 
