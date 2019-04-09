@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Organisation</title>
+</head>
+<body>
+<h1><a href="../">Address Book</a> / {{organisation['name']}}</h1>
+<div class="new_box">
+<form action="/updateOrganisation" method="post" autofocus>
+    <h3>Edit Organisation</h3>
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{organisation['name']}}" required><br>
+    <label>Contact</label><br>
+    <input type="text" name="contact" value="{{organisation['contact']}}" required><br>
+    <input type="hidden" name="id" value="{{organisation['_id']}}">
+    <input class="button" type="submit" value="Submit Edit">
+    <br>
+</form>
+<form action="/deleteOrganisation" method="post">
+     <input type="hidden" name="id" value="{{organisation['_id']}}">
+    <input class="button" type="submit" value="Delete Organisation and Employees">
+</form>
+</div>
+
+
+<h2>Employees</h2>
+{% for employee in employees %}
+<div class="organisationDiv">
+    <div class="infoDiv"><ul> <p>Name: {{employee['name']}}</p><p>Contact: {{employee['contact']}}</p></ul></div>
+    <div class="optionsDiv"><a class="button" href="/updateEmployee?id={{employee['_id']}}">View/Edit</a><br> <form action="/deleteEmployee" method="post"> <input type="hidden" name="id" value="{{employee['_id']}}">    <input type="submit" class="button" value="Delete Employee"></form>  </div>
+</div>
+{% endfor %}
+
+<div class="new_box">
+<form action="/addEmployee" method="post">
+    <h3>New Employee</h3>
+    <label>Name</label><br>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <label>Contact</label><br>
+    <input type="text" name="contact" placeholder="Contact" required><br>
+    <input type="hidden" name="id" value="{{organisation['_id']}}">
+    <input class="button" type="submit" value="Add Employee">
+</form>
+</div>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organisation</title>
+</head>
+<body>
+<h1><a href="../">Address Book</a> - Company</h1>
+<form action="/organisation" method="post" autofocus>
+    <h3>Edit organisation</h3>
+    organisation: Name + Contact <br>
+    <br>
+    <input type="text" name="edit_name" value="{{organisation['name']}}" required><br>
+    <input type="text" name="edit_contact" value="{{organisation['contact']}}" required><br>
+    <input type="hidden" name="edit_id" value="{{organisation['_id']}}">
+    <input type="submit" value="Submit edit">
+</form>
+<h2>Employees</h2>
+<form action="/organisation" method="post">
+    <h3>New Employee</h3>
+    Employee: Name + Contact <br>
+    <br>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="text" name="contact" placeholder="Contact" required><br>
+    <input type="hidden" name="id" value="{{organisation['_id']}}">
+    <input type="submit" value="Submit">
+</form>
+{% for employee in employees %}
+    <ul>{{employee['name']}} - {{employee['contact']}} - <a href="/employee?id={{employee['_id']}}">View</a></ul>
+{% endfor %}
+</body>
+</html>-->

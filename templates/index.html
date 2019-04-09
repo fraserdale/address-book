@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Address Book</title>
+
+</head>
+
+<body>
+<h1>Address Book</h1>
+
+<div class="new_box">
+<form action="/" method="post" autofocus>
+    <h3>New Organisation</h3>
+    <label>Name</label><br>
+    <input type="text" name="name" placeholder="Name" required><br>
+    <label>Contact</label><br>
+    <input type="text" name="contact" placeholder="Contact" required><br>
+    <br>
+    <input class="button" type="submit" value="Add Organisation">
+</form>
+</div>
+
+{% for organisation in organisations %}
+<div class="organisationDiv">
+<div class="infoDiv"><ul> <p>Name: {{organisation['name']}}</p><p>Contact: {{organisation['contact']}}</p></ul></div>
+<div class="optionsDiv"><a class="button" href="/updateOrganisation?id={{organisation['_id']}}">View/Edit</a><br> <form action="/deleteOrganisation" method="post"> <input type="hidden" name="id" value="{{organisation['_id']}}">    <input class="button" type="submit" value="Delete"></form></div>
+</div>
+    {% endfor %}
+
+
+</body>
+
+</html>

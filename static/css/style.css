@@ -1,0 +1,104 @@
+* {
+    font-family: Helvetica;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #3498DB;
+}
+
+input{
+    color: #000;
+    border-radius: 7px;
+    border: 0px;
+    padding:3px;
+    margin-bottom: 3px;    
+}
+
+input[type="submit"]{
+    cursor: pointer;
+}
+
+.new_box{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: 2px solid #2a6592;
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+
+.button{
+    background-color: #34495E;
+    color: #CCCCCC;
+    border-radius: 20px;
+    border: 0px;
+    padding: 3px 8px;
+    font-size: 8pt;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5{
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label{
+    text-align: left;
+}
+
+.options{
+    border: 1px black solid;
+    width: 80px;
+    float: left;
+}
+
+ul{
+    padding: 0;
+    text-align: center;
+}
+
+.organisationDiv{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.organisationDiv > a,ul,form,p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.infoDiv{
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+    display: block;
+}
+
+.infoDiv > ul > p{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.optionsDiv{
+    width: 40%;
+    margin-right: 10%;
+    float: right;
+}
+
+.optionsDiv > form{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.optionsDiv > a{
+    margin-left: 10px;
+    float: left;
+}

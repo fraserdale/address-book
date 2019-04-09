@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Employee</title>
+</head>
+<body>
+<h1><a href="../../">Address Book</a> / <a href="../updateOrganisation?id={{organisation['_id']}}">{{organisation['name']}}</a> / {{employee['name']}}</h1>
+<div class="new_box">
+<form action="/updateEmployee" method="post" autofocus>
+    <h3>Edit Employee</h3>
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{employee['name']}}" required><br>
+    <label>Contact</label><br>
+    <input type="text" name="contact" value="{{employee['contact']}}" required><br>
+    <input type="hidden" name="id" value="{{employee['_id']}}">
+    <input class="button" type="submit" value="Submit Edit">
+</form>
+<form action="/deleteEmployee" method="post">
+    <input type="hidden" name="id" value="{{employee['_id']}}">
+    <input class="button" type="submit" value="Delete Employee">
+</form>
+</body>
+</html>
