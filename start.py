@@ -5,7 +5,7 @@
 
 # Please insert password specified in email here!!!
 # If there is an issue please email me: fraserdale2@gmail.com
-password = 'REPLACE ME'
+password = ''
 
 # The rest of the program does to require to be changed.
 
@@ -24,6 +24,7 @@ mongo_client = pymongo.MongoClient(MONGODB_URI, connectTimeoutMS=30000)
 db = mongo_client.get_database("address-book")
 organisations = db.organisations
 employees = db.employees
+
 
 
 # home index route, returns all the organisations, names and contact details.
@@ -128,4 +129,12 @@ def deleteEmployee():
 	return render_template('organisation.html', organisation=organisation, employees=employeesDump)
 
 if __name__ == "__main__":
+	# check DB login is correct
+	try:
+		db.list_collection_names()
+		print('Successfully connected to the database...')
+	except:
+		print('Unable to login to the database, please ensure password is set correctly on line 8')
+		quit()
+	# start server
 	app.run(port=3000)
