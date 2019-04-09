@@ -20,9 +20,17 @@ This will serve the app on `127.0.0.1:3000`
 
 ### Demonstration Gifs
 On the home page you can add/edit/delete organisations
-1. Create Organisation
-![Create Organisation](https://github.com/fraserdale/address-book/blob/master/images/create_org.gif "Create Organisation")  
-2. Edit Organisation
-![Edit Organisation](https://github.com/fraserdale/address-book/blob/master/images/change_org.gif "Edit Organisation")  
-3. Delete Organisation
-![DeleteDelete Organisation](https://github.com/fraserdale/address-book/blob/master/images/delete_org.gif "Delete Organisation")  
+1. Create Organisation  
+![Create Organisation](https://github.com/fraserdale/address-book/blob/master/images/add_org.gif "Create Organisation")   
+2. Edit Organisation  
+![Edit Organisation](https://github.com/fraserdale/address-book/blob/master/images/change_org.gif "Edit Organisation")   
+3. Delete Organisation  
+![Delete Organisation](https://github.com/fraserdale/address-book/blob/master/images/delete_org.gif "Delete Organisation")   
+
+On each organisation page you can edit or delete the organisation and add/edit/delete employees
+1. Edit Organisation  
+![Edit Organisation](https://github.com/fraserdale/address-book/blob/master/images/change_org.gif "Edit Organisation")   
+2. Add Employee 
+![New Employee ](https://github.com/fraserdale/address-book/blob/master/images/new_emp.gif "New Employee")   
+3. Edit Employee  
+![Edit Employee ](https://github.com/fraserdale/address-book/blob/master/images/edit_emp.gif "Edit Employee")   
