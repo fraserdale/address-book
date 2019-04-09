@@ -12,7 +12,7 @@ The solution is written using python3 backend which is bound to the HTML front e
 ## Instructions
 Using python3  
 Download/Clone the repository and run `python start.py`  
-This will serve the app on 1127.0.0.1:30001
+This will serve the app on `127.0.0.1:3000`
 
 ### Demonstration Images
 1. On the home page you can add/edit/delete organisations
