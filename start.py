@@ -5,7 +5,7 @@
 
 # Please insert password specified in email here!!!
 # If there is an issue please email me: fraserdale2@gmail.com
-password = ''
+password = ' '
 
 # The rest of the program does to require to be changed.
 
