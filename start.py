@@ -18,12 +18,16 @@ from flask import Flask,render_template,request,redirect
 app = Flask(__name__)
 
 # Mongo client connection
-MONGODB_URI = "mongodb://fraser:"+ password +"@ds135036.mlab.com:35036/address-book"
-mongo_client = pymongo.MongoClient(MONGODB_URI, connectTimeoutMS=30000)
-# Select address-book database and initialise the organisations and employees collections
-db = mongo_client.get_database("address-book")
-organisations = db.organisations
-employees = db.employees
+try:
+	MONGODB_URI = "mongodb://fraser:"+ password +"@ds135036.mlab.com:35036/address-book"
+	mongo_client = pymongo.MongoClient(MONGODB_URI, connectTimeoutMS=30000)
+	# Select address-book database and initialise the organisations and employees collections
+	db = mongo_client.get_database("address-book")
+	organisations = db.organisations
+	employees = db.employees
+except:
+	print('Error connecting to database, missing part of MONGODB_URI')
+	quit()
 
 
 
