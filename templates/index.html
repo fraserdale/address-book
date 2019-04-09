@@ -26,7 +26,7 @@
 {% for organisation in organisations %}
 <div class="organisationDiv">
 <div class="infoDiv"><ul> <p>Name: {{organisation['name']}}</p><p>Contact: {{organisation['contact']}}</p></ul></div>
-<div class="optionsDiv"><a class="button" href="/updateOrganisation?id={{organisation['_id']}}">View/Edit</a><br> <form action="/deleteOrganisation" method="post"> <input type="hidden" name="id" value="{{organisation['_id']}}">    <input class="button" type="submit" value="Delete"></form></div>
+<div class="optionsDiv"><a class="button" href="/organisation?id={{organisation['_id']}}">View/Edit</a><br> <form action="/deleteOrganisation" method="post"> <input type="hidden" name="id" value="{{organisation['_id']}}">    <input class="button" type="submit" value="Delete"></form></div>
 </div>
     {% endfor %}
 

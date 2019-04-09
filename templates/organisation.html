@@ -29,7 +29,7 @@
 {% for employee in employees %}
 <div class="organisationDiv">
     <div class="infoDiv"><ul> <p>Name: {{employee['name']}}</p><p>Contact: {{employee['contact']}}</p></ul></div>
-    <div class="optionsDiv"><a class="button" href="/updateEmployee?id={{employee['_id']}}">View/Edit</a><br> <form action="/deleteEmployee" method="post"> <input type="hidden" name="id" value="{{employee['_id']}}">    <input type="submit" class="button" value="Delete Employee"></form>  </div>
+    <div class="optionsDiv"><a class="button" href="/employee?id={{employee['_id']}}">View/Edit</a><br> <form action="/deleteEmployee" method="post"> <input type="hidden" name="id" value="{{employee['_id']}}">    <input type="submit" class="button" value="Delete Employee"></form>  </div>
 </div>
 {% endfor %}
 
