@@ -8,6 +8,7 @@
 ## Solution
 This solution uses the pymongo module and an mlab database to store the information about the organisations and their employees.  
 The solution is written using python3 backend which is bound to the HTML front end using flask.
+The lists are sorted by Name
 
 ## Instructions
 Using python3   
