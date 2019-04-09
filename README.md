@@ -13,7 +13,7 @@ The solution is written using python3 backend which is bound to the HTML front e
 Using python3   
 Download/Clone the repository  
 Please insert the database login password I have given you in the email in line 8 of `start.py` like below
-![Set Password](https://github.com/fraserdale/address-book/blob/master/images/password_insert.PNG "Set Password")  
+![Set Password](https://github.com/fraserdale/address-book/blob/master/images/password_insert.gif "Set Password")  
 Run `python start.py`  
 This will serve the app on `127.0.0.1:3000`  
 
