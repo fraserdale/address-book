@@ -18,10 +18,11 @@ Please insert the database login password I have given you in the email in line 
 Run `python start.py`  
 This will serve the app on `127.0.0.1:3000`  
 
-### Demonstration Images
-1. On the home page you can add/edit/delete organisations
-![Address Book Home](https://github.com/fraserdale/address-book/blob/master/images/address_book_home.PNG "Address Book Home")
-2. On the organisation page you can edit/delete the organisation and add/edit/delete employees
-![Organisation Page](https://github.com/fraserdale/address-book/blob/master/images/organisation_page.PNG "Organisation Page")
-3. On the employee page you can edit/delete the employee
-![Employee Page](https://github.com/fraserdale/address-book/blob/master/images/employee_page.PNG "Employee Page")
+### Demonstration Gifs
+On the home page you can add/edit/delete organisations
+1. Create Organisation
+![Create Organisation](https://github.com/fraserdale/address-book/blob/master/images/create_org.gif "Create Organisation")  
+2. Edit Organisation
+![Edit Organisation](https://github.com/fraserdale/address-book/blob/master/images/change_org.gif "Edit Organisation")  
+3. Delete Organisation
+![DeleteDelete Organisation](https://github.com/fraserdale/address-book/blob/master/images/delete_org.gif "Delete Organisation")  
