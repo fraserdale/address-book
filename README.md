@@ -7,9 +7,14 @@
 
 ## Solution
 This solution uses the pymongo module and an mlab database to store the information about the organisations and their employees.  
-The solution is written using python backend which is bound to the HTML front end using flask.
+The solution is written using python3 backend which is bound to the HTML front end using flask.
+
+## Instructions
+Using python3
+Download/Clone the repository and run `python start.py`
 
 ### Demonstration Images
+1. On the hom
 ![Address Book Home](https://github.com/fraserdale/address-book/blob/master/images/address_book_home.PNG "Address Book Home")
 ![Organisation Page](https://github.com/fraserdale/address-book/blob/master/images/organisation_page.PNG "Organisation Page")
 ![Employee Page](https://github.com/fraserdale/address-book/blob/master/images/employee_page.PNG "Employee Page")
