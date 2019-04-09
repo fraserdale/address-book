@@ -10,11 +10,12 @@ This solution uses the pymongo module and an mlab database to store the informat
 The solution is written using python3 backend which is bound to the HTML front end using flask.
 
 ## Instructions
-Using python3  
+Using python3   
+Download/Clone the repository  
 Please insert the database login password I have given you in the email in line 8 of `start.py` like below
 ![Set Password](https://github.com/fraserdale/address-book/blob/master/images/password_insert.PNG "Set Password")  
-Download/Clone the repository and run `python start.py`  
-This will serve the app on `127.0.0.1:3000`
+Run `python start.py`  
+This will serve the app on `127.0.0.1:3000`  
 
 ### Demonstration Images
 1. On the home page you can add/edit/delete organisations
