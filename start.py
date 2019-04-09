@@ -128,6 +128,11 @@ def deleteEmployee():
 	employeesDump = employees.find({"organisationID":organisation_id}).sort([("name",pymongo.ASCENDING)])
 	return render_template('organisation.html', organisation=organisation, employees=employeesDump)
 
+# general 404 error handler
+@app.errorhandler(404)
+def page_not_found(e):
+	return render_template('error.html'), 404
+
 if __name__ == "__main__":
 	# check DB login is correct
 	try:
