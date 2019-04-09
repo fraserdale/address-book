@@ -30,7 +30,7 @@ employees = db.employees
 # home index route, returns all the organisations, names and contact details.
 @app.route("/",methods=['GET'])
 def home():
-	organisationsDump = organisations.find({})
+	organisationsDump = organisations.find({}).sort([("name",pymongo.ASCENDING)])
 	return render_template('index.html',organisations=organisationsDump)
 
 # create new organisation, inserts name and contact details
@@ -53,7 +53,7 @@ def getOrganisation():
 		return redirect("/", code=302)
 	organisation_id = request.args.get('id')
 	organisation = organisations.find_one({"_id": ObjectId(organisation_id)})
-	employeesDump = employees.find({"organisationID": organisation_id})
+	employeesDump = employees.find({"organisationID": organisation_id}).sort([("name",pymongo.ASCENDING)])
 	return render_template('organisation.html', organisation=organisation, employees=employeesDump)
 
 # updates the information about the organisation
@@ -66,7 +66,7 @@ def updateOrganisation():
 		}, upsert=False)
 	organisation_id = request_information['id']
 	organisation = organisations.find_one({"_id": ObjectId(organisation_id)})
-	employeesDump = employees.find({"organisationID":organisation_id})
+	employeesDump = employees.find({"organisationID":organisation_id}).sort([("name",pymongo.ASCENDING)])
 	return render_template('organisation.html', organisation=organisation,employees=employeesDump)
 
 # deletes the organisation specified
@@ -76,7 +76,7 @@ def deleteOrganisation():
 	request_information = request.form
 	organisations.delete_one({"_id": ObjectId(request_information['id'])})
 	employees.delete_many({"organisationID":request_information['id']})
-	organisationsDump = organisations.find({})
+	organisationsDump = organisations.find({}).sort([("name",pymongo.ASCENDING)])
 	return render_template('index.html',organisations=organisationsDump)
 
 # employee page displays name and contact information about
@@ -100,7 +100,7 @@ def addEmployee():
  					  "organisationID": request_information['id']})
 	organisation_id = request_information['id']
 	organisation = organisations.find_one({"_id": ObjectId(organisation_id)})
-	employeesDump = employees.find({"organisationID":organisation_id})
+	employeesDump = employees.find({"organisationID":organisation_id}).sort([("name",pymongo.ASCENDING)])
 	return render_template('organisation.html', organisation=organisation,employees=employeesDump)
 
 # udpates the information relating to the employee
@@ -125,7 +125,7 @@ def deleteEmployee():
 	organisation_id = employee['organisationID']
 	organisation = organisations.find_one({"_id":ObjectId(organisation_id)})
 	employees.delete_one({"_id": ObjectId(request_information['id'])})
-	employeesDump = employees.find({"organisationID":organisation_id})
+	employeesDump = employees.find({"organisationID":organisation_id}).sort([("name",pymongo.ASCENDING)])
 	return render_template('organisation.html', organisation=organisation, employees=employeesDump)
 
 if __name__ == "__main__":
