@@ -137,4 +137,4 @@ if __name__ == "__main__":
 		print('Unable to login to the database, please ensure password is set correctly on line 8')
 		quit()
 	# start server
-	app.run(port=3000)
+	app.run(port=3000,debug=False)
