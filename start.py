@@ -1,3 +1,15 @@
+# Name: Fraser Dale
+# Email: fraserdale2@gmail.com
+# Date: 09/04/19
+# Instuctions: Run this file (start.py) and navigate to 127.0.0.1:3000 or localhost:3000
+
+# Please insert password specified in email here!!!
+# If there is an issue please email me: fraserdale2@gmail.com
+password = 'REPLACE ME'
+
+# The rest of the program does to require to be changed.
+
+
 import pymongo
 from bson import ObjectId
 from flask import Flask,render_template,request,redirect
@@ -6,7 +18,7 @@ from flask import Flask,render_template,request,redirect
 app = Flask(__name__)
 
 # Mongo client connection
-MONGODB_URI = "mongodb://fraser:Secure_1@ds135036.mlab.com:35036/address-book"
+MONGODB_URI = "mongodb://fraser:"+ password +"@ds135036.mlab.com:35036/address-book"
 mongo_client = pymongo.MongoClient(MONGODB_URI, connectTimeoutMS=30000)
 # Select address-book database and initialise the organisations and employees collections
 db = mongo_client.get_database("address-book")
