@@ -7,7 +7,7 @@
 # If there is an issue please email me: fraserdale2@gmail.com
 password = ' '
 
-# The rest of the program does to require to be changed.
+# The rest of the program does not require to be changed.
 
 
 import pymongo
